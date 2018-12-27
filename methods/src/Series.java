@@ -7,6 +7,9 @@ public class Series {
 
         System.out.println("Sum of squares of first "+n+" natural numbers");
         System.out.println(sumOfNaturalSquares(n));
+
+        System.out.println("Sum of cubes of first "+n+" natural numbers");
+        System.out.println(sumOfNaturalCubes(n));
     }
 
     //Sum of first n natural numbers
@@ -18,6 +21,12 @@ public class Series {
     //Sum of squares of first n natural numbers
     public static int sumOfNaturalSquares(int n){
         int sum=n*(n+1)*(2*n+1)/6;
+        return sum;
+    }
+
+    //Sum of cubes of first n natural numbers
+    public static int sumOfNaturalCubes(int n){
+        int sum=(n*(n+1)/2)*(n*(n+1)/2);
         return sum;
     }
 }
