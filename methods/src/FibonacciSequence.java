@@ -8,11 +8,19 @@ public class FibonacciSequence {
         for (int i = 0; i <= n; i++) {
             System.out.println(i + ": " + fibonacciElement(i));
         }
+
+        //sum of n first Fibonacci numbers
+        System.out.println(fibonacciSum(n));
     }
 
     public static int fibonacciElement(int n){
         if (n <= 1)
             return n;
         return fibonacciElement(n - 1) + fibonacciElement(n - 2);
+    }
+
+    public static int fibonacciSum(int n){
+        int sum=fibonacciElement(n+2)-1;
+        return sum;
     }
 }
