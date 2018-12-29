@@ -12,6 +12,14 @@ public class FibonacciSequence {
         //sum of n first Fibonacci numbers
         System.out.println(fibonacciSum(n));
         System.out.println(fibonacciSumSimple(n));
+
+        int m=30;
+        //Fibonacci numbers whose values do not exceed m
+        int i=0;
+        while (fibonacciElement(i)<=m){
+            System.out.println(i+": "+fibonacciElement(i));
+            i++;
+        }
     }
 
     public static int fibonacciElement(int n){
