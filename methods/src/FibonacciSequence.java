@@ -11,6 +11,7 @@ public class FibonacciSequence {
 
         //sum of n first Fibonacci numbers
         System.out.println(fibonacciSum(n));
+        System.out.println(fibonacciSumSimple(n));
     }
 
     public static int fibonacciElement(int n){
@@ -21,6 +22,14 @@ public class FibonacciSequence {
 
     public static int fibonacciSum(int n){
         int sum=fibonacciElement(n+2)-1;
+        return sum;
+    }
+
+    public static int fibonacciSumSimple(int n){
+        int sum=0;
+        for (int i=0; i<=n; i++){
+            sum+=fibonacciElement(i);
+        }
         return sum;
     }
 }
