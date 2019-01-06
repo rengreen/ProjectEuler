@@ -16,6 +16,8 @@ public class Primes {
         for (Integer item: primesUnder(maxValue)) {
             System.out.println(item);
         }
+
+        System.out.println("there are "+numberOfPrimesUnder(maxValue)+" prime numbers not greater then " + maxValue);
     }
 
     public static Boolean[] sieveOfEratosthenes(int maxValue){
@@ -42,5 +44,12 @@ public class Primes {
             }
         }
         return primesUnder;
+    }
+
+    //how many prime numbers is not greater than given maxValue
+    public static int numberOfPrimesUnder(int maxValue){
+        List<Boolean> list = Arrays.asList(sieveOfEratosthenes(maxValue));
+        int frequency= Collections.frequency(list,true);
+        return Collections.frequency(list,true);
     }
 }
